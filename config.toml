@@ -1,4 +1,4 @@
 baseURL = "https://willearp.com/"
 languageCode = "en-gb"
-title = "Blog"
-theme = "ananke"
+title = "willearp"
+theme = "hugo-theme-console"
