@@ -2,3 +2,11 @@ baseURL = "https://willearp.com/"
 languageCode = "en-gb"
 title = "willearp"
 theme = "hugo-theme-console"
+enableEmoji = true
+summaryLength = 30
+
+[params]
+
+  [[params.navlinks]]
+  name = "about/"
+  url = "about/"

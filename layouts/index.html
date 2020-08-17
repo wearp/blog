@@ -1,0 +1,29 @@
+{{ define "main" }}
+
+<h1>About</h1>
+
+<div class="about">
+    <p>
+        {{ with .Site.GetPage "/about" }}
+        {{ .Summary }}
+        <a href="{{ .Permalink }}">(more)</a>
+        {{ end }}
+    </p>
+</div>
+<br/>
+
+<h1>Latest posts</h1>
+
+<div class="posts-list">
+    {{ with .Site.GetPage "/posts" }}
+    {{ range first 3 (sort .Data.Pages "Date" "desc" (where .Pages ".Params.private" "!=" true))}}
+    <div class="post">
+        <div class="date">{{ .PublishDate.Format "Jan. 2, 2006" }}</div>
+        <h1><a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a></h1>
+        {{ .Summary }}
+    </div>
+    {{ end }}
+    {{ end }}
+</div>
+
+{{ end }}
