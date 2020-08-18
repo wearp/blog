@@ -1,9 +1,10 @@
 baseURL = "https://willearp.com/"
 languageCode = "en-gb"
-title = "willearp"
+title = "willearp.com"
 theme = "hugo-theme-console"
 enableEmoji = true
 summaryLength = 30
+copyright = "Will Earp"
 
 [params]
 
