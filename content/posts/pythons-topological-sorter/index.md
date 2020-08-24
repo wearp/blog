@@ -1,7 +1,6 @@
 +++
-date = "2020-08-21T00:00:00Z"
+date = "2020-08-24T00:00:00Z"
 title = "Python 3.9's TopologicalSorter"
-draft = true
 +++
 
 ## Introduction 
@@ -43,7 +42,7 @@ _Figure 2_ shows a very basic **cyclic** graph. You can follow from vertex A to 
   +------> | B |
            +---+
 ```
-Figure 1: Basic _cyclic_ graph.
+Figure 2: Basic _cyclic_ graph.
 
 Due to this acyclic property, a DAG must contain at least one **topological ordering** of its vertices. In simplest terms, it's a sequence of the vertices such that every edge is directed from earlier to later in the sequence. In _Figure 1_, two topological orderings are possible: A, B, C, D, E and A, C, B, D, E.
 
@@ -82,9 +81,12 @@ Traceback (most recent call last):
 graphlib.CycleError: ('nodes are in a cycle', ['A', 'B', 'C', 'A'])
 ```
 ---
-## Thank you
 
-Thanks for taking time to read my post on Python 3.9's new `TopologicalSorter`. I hope it's been worth your while. If you want to understand any of the content here in greater depth, I suggest taking a look at the links below.
+## Final thoughts
+
+`graphlib` is Python's first foray into graph data structures. Up until now, such tools have stayed out the standard library with a number of established third-party packages serving the community instead. I'm interested to see how this module evolves or if it evolves at all.
+
+Anyway, thanks for taking time to read my post on Python 3.9's new `TopologicalSorter`. I hope it's been worth your while. If you want to understand any of the content here in greater depth, I suggest taking a look at the links below.
 
 Also, if you have any feedback for me or just want to get in touch, please email me at <will.earp@icloud.com>.
 
