@@ -31,7 +31,11 @@ It's **directed**. Edges connecting vertices have a direction associated with th
 
 Finally, it's **acyclic**, which means it has no directed cycles. In other words, the graph has no trail that when followed loops back on itself. So, if you start at one vertex, and follow the graph, you can't return to the same vertex. 
 
-_Figure 2_ shows a very basic **cyclic** graph. You can follow from vertex A to B to C and back to A, and so on:
+Due to this acyclic property, a DAG must contain at least one **topological ordering** of its vertices. In simplest terms, it's a sequence of the vertices such that every edge is directed from earlier to later in the sequence. In _Figure 1_, two topological orderings are possible: A, B, C, D, E and A, C, B, D, E.
+
+So, **Topological sorting** is the algorithmic problem of finding a topological ordering given a DAG. 
+
+_Figure 2_ shows a very basic **cyclic** graph. You can follow from vertex A to B to C and back to A. This is a directed cycle. For these types of graphs, no topological ordering exists and so they can't be topologically sorted.
 ```
 +---+      +---+ 
 | A | <--- | C |
@@ -43,10 +47,6 @@ _Figure 2_ shows a very basic **cyclic** graph. You can follow from vertex A to 
            +---+
 ```
 Figure 2: Basic _cyclic_ graph.
-
-Due to this acyclic property, a DAG must contain at least one **topological ordering** of its vertices. In simplest terms, it's a sequence of the vertices such that every edge is directed from earlier to later in the sequence. In _Figure 1_, two topological orderings are possible: A, B, C, D, E and A, C, B, D, E.
-
-So, **Topological sorting** is the algorithmic problem of finding a topological ordering given a DAG. 
 
 ---
 
