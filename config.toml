@@ -9,5 +9,9 @@ copyright = "Will Earp"
 [params]
 
   [[params.navlinks]]
+  name = "posts/"
+  url = "posts/"
+
+  [[params.navlinks]]
   name = "about/"
   url = "about/"
